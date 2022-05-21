@@ -1,0 +1,137 @@
+@import '../variables';
+
+.register{
+    color: $light-color;
+    border-radius: 4px;
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+
+    .title{
+        margin-top: 1em;
+        font-weight: 700;
+        color: rgba($color: #000000, $alpha: .7);
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    button{
+        width: 80%;
+        padding: 10px;
+        margin-top: 20px;
+        border: 0;
+        background-color: $light-el-primary-color;
+        font-weight: 500;
+        text-transform: uppercase;
+        border-radius: 4px;
+
+        &:hover{
+            transform: scale(.99);
+        }
+
+    }
+
+    .sheet{
+        padding: 3em 1em;
+        .form-group{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+            justify-content: center;
+            width: 80%;
+
+            label{
+                font-weight: 600;
+                color: $light-line-color;
+            }
+
+            input{
+                border-radius: 4px;
+                border: 0;
+                padding: 7px 15px;
+                font-weight: 500;
+                
+                &:focus{
+                    outline: 1px solid $light-el-primary-color;
+                    background-color: rgba($color: $light-el-primary-color, $alpha: .2);
+                }
+            }
+
+        }
+
+        .form-group.gender{
+            margin-bottom: 10px;
+            .box-radio{
+                display: flex;
+                margin-top: 10px;
+                .radio-group{
+                    margin-right: 20px;
+                    display: flex;
+                }
+            }
+        }
+
+        .form-group.in-line{
+            flex-direction: row;
+            .form-group{
+                &:nth-child(1){
+                    margin-right: 20px;
+                }
+            }
+        }
+
+        &.left{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &.right{
+            h1{
+                color: $light-line-color;
+                font-weight: 700;
+                span{
+                    color: $light-el-primary-color;
+                }
+            }
+            img{
+                width: 300px;
+            }
+        }
+    }
+}
+
+.register.dark{
+    color: $dark-color;
+
+    .title{
+        color: rgba($color: #fff, $alpha: .7);
+    }
+
+    button{
+        background-color: $dark-el-primary-color;
+    }
+
+    .sheet{
+        .form-group{
+            label{
+                color: $dark-line-color;
+            }
+            input{
+                background-color: $dark-secondary-color;
+                color: $dark-line-color;
+                &:focus{
+                    outline: 1px solid $dark-el-primary-color;
+                    background-color: rgba($color: $dark-el-primary-color, $alpha: .2);
+                }
+            }
+        }
+        &.right{
+            h1{
+                color: $dark-line-color;
+                span{
+                    color: $dark-el-primary-color;
+                }
+            }
+        }
+    }
+}

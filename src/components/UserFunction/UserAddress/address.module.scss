@@ -1,0 +1,44 @@
+@import '../../variables';
+
+.address{
+    color: $light-color;
+    .address-title{
+        font-size: 25px;
+    }
+    .add-address-btn{
+        width: 100%;
+        margin: 10px 0;
+        padding: 15px;
+        font-size: 20px;
+        font-weight: 700;
+        background-color: $light-secondary-color;
+        border: 1px solid rgba($color: $light-constract-color, $alpha: .7);
+        color: $light-constract-color;
+        box-shadow: 4px 4px 0 0 $light-shadow-color;
+        
+        &:hover{
+            background-color: rgba($color: $light-el-secondary-color, $alpha: .2);
+            color: $light-color;
+        }
+
+        i{
+            margin-right: 15px;
+            font-size: 22px;
+        }
+    }
+}
+
+.address.dark{
+    color: $dark-color;
+    .add-address-btn{
+        background-color: rgb(128, 83, 0);
+        border: 1px solid rgba($color: $dark-el-primary-color, $alpha: .7);
+        color: $dark-color;
+        box-shadow: 4px 4px 0 0 $light-shadow-color;
+        
+        &:hover{
+            background-color: rgba($color: $dark-el-secondary-color, $alpha: .7);
+            color: $dark-color;
+        }
+    }
+}

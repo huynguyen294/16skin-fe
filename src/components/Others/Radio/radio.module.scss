@@ -1,0 +1,41 @@
+@import '../../variables';
+
+.radio{
+    width: 18px;
+    height: 18px;
+    border: 1px solid $light-constract-color;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: all .3s ease;
+    position: relative;
+    padding: 0;
+
+    div{
+        width: 13px;
+        height: 13px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        margin: 0;
+        padding: 0;
+        transition: all .3s ease;
+    }
+
+    &.active{
+        div{
+            background-color: $light-constract-color;
+        }
+    }
+}
+
+.radio.dark{
+    border: 1px solid $dark-el-primary-color;
+    &.active{
+        div{
+            background-color: $dark-el-primary-color;
+        }
+    }
+}

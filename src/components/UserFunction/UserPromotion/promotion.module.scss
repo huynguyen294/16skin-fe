@@ -1,0 +1,17 @@
+@import '../../variables';
+
+.box-promotion{
+    color: $light-color;
+    h3{
+        font-size: 25px;
+    }
+    .promotion-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.box-promotion.dark{
+    color: $dark-color;
+}

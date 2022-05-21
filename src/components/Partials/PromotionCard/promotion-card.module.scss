@@ -1,0 +1,165 @@
+@import '../../variables';
+
+.promo-card{
+    color:  $light-color;
+    width: calc(50% - 5px);
+    margin: 10px 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+
+    &:hover{
+        .details{
+            background-color: rgba($color: $light-primary-color, $alpha: .5);
+        }
+    }
+
+    p{
+        margin: 0;
+    }
+
+    h3{
+        margin: 0;
+        padding: 0;
+    }
+
+    .title{
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: #fff;
+
+        p{
+            font-size: 12px;
+        }
+    }
+
+    .details{
+        background-color: rgba($color: #fff, $alpha: .3);
+        border: 1px solid $light-constract-color;
+        border-radius: 0 8px 8px 0;
+        border-left: 0;
+        padding: 20px;
+        position: relative;
+        width: 70%;
+
+        .tooltip{
+            position: absolute;
+            background-color: rgb(255, 255, 255);
+            list-style-type: none;
+            padding: 20px;
+            z-index: 100;
+            box-shadow: 0 0 6px 6px $light-shadow-color;
+            border-radius: 4px;
+            font-weight: 500;
+            top: 25px;
+            right: -45px;
+            left: -10px;
+            display: none;
+
+            li{
+                display: flex;
+                justify-content: space-between;
+                margin: 10px 0;
+
+                &:last-child{
+                    display: block;
+                    ul{
+                        padding: 0;
+                    }
+                }
+            }
+
+            &:hover {
+                display: block;
+            }
+        }
+
+        i{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            color: rgb(0, 132, 255);
+            cursor: pointer;
+
+            &:hover + .tooltip{
+                display: block;
+            }
+        }
+
+        .use-now-btn{
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background-color: transparent;
+            border: 2px solid $price-color;
+            color: $price-color;
+            font-weight: 500;
+            font-size: 15px;
+            padding: 3px 8px;
+            border-radius: 20px;
+            font-family: 'Roboto', sans-serif;
+
+            &:hover{
+                background-color: rgba($color: $light-primary-color, $alpha: .5);
+            }
+        }
+
+        .type{
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .guide{
+            font-size: 13px;
+        }
+
+        .date{
+            margin-top: 25px;
+            font-weight: 500;
+            font-size: 15px;
+        }
+    }
+
+}
+
+.promo-card.dark{
+    color:  $dark-color;
+
+    &:hover{
+        .details{
+            background-color: rgba($color: $dark-primary-color, $alpha: .2);
+        }
+    }
+
+    .title{
+        color: #fff;
+    }
+
+    .details{
+        background-color: rgba($color: #000, $alpha: .3);
+        border: 1px solid $light-constract-color;
+        .tooltip{
+            background-color: $dark-secondary-color-solid;
+            box-shadow: 0 0 6px 6px $dark-shadow-color;
+        }
+
+        i{
+            color: rgb(0, 132, 255);
+        }
+
+        .use-now-btn{
+            border: 2px solid $price-color;
+
+            &:hover{
+                background-color: rgba($color: $dark-primary-color, $alpha: .8);
+            }
+        }
+    }
+
+}

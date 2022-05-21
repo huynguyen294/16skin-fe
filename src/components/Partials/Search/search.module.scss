@@ -1,0 +1,135 @@
+@import '../../variables';
+
+.search-menu{
+    display: none;
+    position: absolute;
+    background-color: $light-secondary-color-solid;
+    z-index: 11;
+    top: 110%;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+    width: 90%;
+    list-style-type: none;
+    padding: 15px;
+    margin: 0;
+    animation: subMenuUp .3s ease-out;
+
+    h3{
+        font-size: 17px;
+        text-transform: uppercase;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    ul{
+        list-style-type: none;
+        padding: 0;
+    }
+
+
+    .search-history{
+        ul{
+            list-style-type: none;
+            padding: 0;
+            li{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                padding: 5px;
+                border-radius: 2px;
+                &:hover{
+                    background-color: rgba($color: #000000, $alpha: .1);
+                }
+                i{
+                    color: $light-line-color;
+                    margin-right: 10px;
+
+                    &.close{
+                        padding: 2px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    .search-title{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-top: 15px;
+        a{
+            color: $light-line-color;
+            &:hover{
+                color: $light-constract-color;
+            }
+        }
+    }
+
+    .search-card{
+        &:hover{
+            background-color: rgba($color: #000000, $alpha: .1);
+            border-radius: 3px;
+        }
+        a{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: $light-color;
+            font-size: 15px;
+            img{
+                width: 50px;
+                margin: 5px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .search-product{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.search-menu.active{
+    display: block;
+}
+
+.search-menu.dark{
+    color: $dark-color;
+    background-color: $dark-secondary-color-solid;
+
+    .search-history{
+        ul{
+            li{
+                &:hover{
+                    background-color: rgba($color: #fff, $alpha: .1);
+                }
+                i{
+                    color: $dark-line-color;
+                }
+            }
+        }
+    }
+
+    .search-title{
+        a{
+            color: $dark-line-color;
+            &:hover{
+                color: $dark-el-primary-color;
+            }
+        }
+    }
+
+    .search-card{
+        &:hover{
+            background-color: rgba($color: #fff, $alpha: .1);
+        }
+        a{
+            color: $dark-color;
+        }
+    }
+}

@@ -1,0 +1,143 @@
+@import '../../variables';
+.product-slider {
+  position: relative;
+  padding: 0;
+
+  .pro-cat-title {
+    margin: 20px 0 10px 10px;
+    font-size: 45px;
+  }
+
+  .see-more-btn {
+    position: absolute;
+    font-size: 18px;
+    color: $light-constract-color;
+    right: 1em;
+    top: 1em;
+    font-weight: 500;
+    cursor: pointer;
+
+    &:hover {
+      font-weight: 700;
+    }
+  }
+
+  .box-pro-slider {
+    max-width: 100%;
+    display: flex;
+
+    &:hover{
+      .box-pro-btn{
+        .btn-pro-slide {
+          button{
+            width: 60px;
+            height: 60px;
+          }
+          i{
+            font-size: 20px;
+            font-weight: 700;
+          }
+          &.left {
+            left: -20px;
+          }
+          &.right {
+            right: -20px;
+          } 
+        }
+      }
+    }
+    .box-pro-btn{
+      position: relative;
+      max-width: 100%;
+      .btn-pro-slide {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    
+        button {
+          background-color: $light-el-primary-color;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          border: 0;
+
+          i{
+            font-size: 15px;
+          }
+          
+    
+          &:active {
+            transform: scale(0.98);
+          }
+
+        }
+
+        &:hover{
+          button{
+            width: 60px;
+            height: 60px;
+          }
+
+          i{
+            font-size: 20px;
+            font-weight: 700;
+          }
+
+          &.left {
+            left: -20px;
+          }
+      
+          &.right {
+            right: -20px;
+          }
+        }
+    
+        &.left {
+          left: -10px;
+        }
+    
+        &.right {
+          right: -10px;
+        }
+      }
+
+      .box-pro-list{
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+
+        .pro-list{
+          width: 200%;
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+/* Dark theme */
+
+.product-slider.dark {
+  color: $dark-color;
+
+  .see-more-btn {
+    position: absolute;
+    font-size: 18px;
+    font-family: 'Quicksand', sans-serif;
+    color: $dark-el-primary-color;
+    right: 1em;
+    top: 1em;
+    cursor: pointer;
+  }
+
+  .box-pro-slider{
+    .box-pro-btn{
+      .btn-pro-slide{
+        button {
+          background-color: $dark-el-primary-color;
+        }
+      }
+    }
+  }
+}

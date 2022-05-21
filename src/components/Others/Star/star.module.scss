@@ -1,0 +1,14 @@
+@import '../../variables';
+
+.star{
+    color: $price-color;
+    padding: 0;
+    margin: 0;
+
+    .sm{
+        font-size: 12px;
+    }
+    .lg{
+        font-size: 23px;
+    }
+}

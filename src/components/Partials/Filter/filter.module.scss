@@ -1,0 +1,23 @@
+@import '../../variables';
+
+.filter {
+  padding: 1em;
+  margin-top: 1em;
+  border-right: 1px inset #ccc;
+  height: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+/*  dark theme */
+
+.filter.dark {
+  .box-filter{
+    li{
+      span{
+        color: $dark-color;
+      }
+    } 
+  } 
+}

@@ -1,0 +1,29 @@
+@import '../../variables';
+
+.box-description{
+    background-color: $light-third-color;
+    margin-top: 1em;
+    padding: 2em;
+    font-weight: 500;
+    p{
+        margin: 5px
+    }
+
+    .desc-title{
+        h3{
+            text-align: center;
+            font-weight: 600;
+        }
+    }
+
+    h3{
+        font-size: 20px;
+        text-decoration: underline;
+        text-align: start;
+    }
+}
+
+.box-description.dark{
+    background-color: $dark-secondary-color;
+    color: rgba($dark-color, .85);
+}

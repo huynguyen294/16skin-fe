@@ -1,0 +1,17 @@
+@import '../../variables';
+
+.user-favorite{
+    color: $light-color;
+    h3{
+        font-size: 25px;
+        padding: 0;
+        margin: 0;
+    }
+    .box-favorite{
+        margin-top: 15px;
+    }
+}
+
+.user-favorite.dark{
+    color: $dark-color;
+}

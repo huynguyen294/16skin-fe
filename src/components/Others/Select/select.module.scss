@@ -1,0 +1,49 @@
+@import '../../variables';
+p{
+    padding: 0;
+    margin: 0;
+}
+.select{
+    background-color: $light-el-primary-color;
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 10px 0;
+    p{
+        padding: 10px;
+    }
+    &.active{
+        border-radius: 3px 3px 0 0;
+        .sub-menu{
+            display: block;
+        }
+    }
+    .sub-menu{
+        display: none;
+        position: absolute;
+        top: 100%;
+        background-color: $light-el-primary-color;  
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        border-radius: 0 0 3px 3px;
+        padding: 0 10px 15px;
+        width: 100%;
+
+        li{
+            width: 100%;
+            border-bottom: 1px solid rgba($color: $light-constract-color, $alpha: .3);
+            padding: 5px 0;
+
+            &:nth-child(1){
+                border-top: 1px solid rgba($color: $light-constract-color, $alpha: .3);
+            }
+            &:hover{
+                background-color: rgba($color: #000000, $alpha: .1);
+            }
+        }
+    }
+}

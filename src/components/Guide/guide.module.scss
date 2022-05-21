@@ -1,0 +1,60 @@
+@import '../variables';
+
+.guide{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
+
+    .guide-title{
+        font-weight: 700;
+        color: $light-line-color;
+        font-size: 50px;
+    }
+
+    .hello-ticker{
+        position: absolute;
+        width: 200px;
+        right: 10%;
+        top: 10%;
+
+        &.left{
+            left: 5%;
+            top: 80%;
+        }
+    }
+
+    .part{
+        width: 50%;
+        list-style-type: none;
+        font-size: 17px;
+        padding: 0;
+        margin: 5px;
+        font-family: 'Roboto', sans-serif;
+        
+        .part-title{
+            color: $light-line-color;
+            font-weight: 500;
+            margin: 0;
+            margin-bottom: 5px;
+            font-size: 23px;
+        }
+        li{
+            margin: 0;
+        }
+    }
+}
+
+.guide.dark{
+    color: rgba($color: $dark-color, $alpha: .9);
+
+    .guide-title{
+        color: $dark-line-color;
+    }
+    .part{
+        .part-title{
+            color: $dark-line-color;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+@import '../../../variables';
+
+.nav-category {
+  .box-nav-category{
+    border-top: 1px inset $light-line-color;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+}
+
+.nav-category.dark {
+  .box-nav-category{
+    border-top: 1px inset $dark-line-color;
+  }
+}

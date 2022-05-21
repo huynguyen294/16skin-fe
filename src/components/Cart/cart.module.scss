@@ -1,0 +1,203 @@
+@import '../variables';
+
+.cart{
+    margin-top: 2em;
+    color: $light-color;
+    .cart-control{
+        padding: 10px;
+        background-color: $light-third-color;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        .checkbox-count{
+            width: 40%;
+            margin-right: 5px;
+            display: flex;
+            align-items: center;
+            .counter{
+                margin: 0;
+                padding: 0;
+                margin-left: 5px;
+                font-size: 15px;
+            }
+        }
+
+        span{
+            &:nth-child(2){
+                width: 20%;
+            }
+            &:nth-child(3){
+                width: 15%;
+            }
+            &:nth-child(4){
+                width: 10%;
+            }
+            &:nth-child(5){
+                cursor: pointer;
+                position: relative;
+
+                &:hover{
+                    .tooltip{
+                        display: flex;
+                    }
+                }
+                .tooltip{
+                    position: absolute;
+                    width: 200px;
+                    right: -100%;
+                    top: 110%;
+                    padding: 4px;
+                    justify-content: center;
+                    border-radius: 4px;
+                    background-color: #000;
+                    color: #fff;
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .address-control{
+        background-color: $light-third-color;
+        padding: 10px;
+        border-radius: 3px;
+        margin-bottom: 20px;
+        position: relative;
+        .address-title{
+            p{
+                font-size: 22px;
+                font-weight: 500;
+                margin: 0;
+                color: $light-line-color;
+            }
+            a{
+                position: absolute;
+                right: 25px;
+                font-size: 15px;
+                top: 12px;
+                font-weight: 400;
+                text-decoration: none;
+                font-family: 'Roboto', sans-serif;
+
+                &:hover{
+                    font-weight: 500;
+                }
+            }
+        }
+        .user-address{
+            display: flex;
+            max-width: 100%;
+            p{
+                padding: 0 5px;
+                margin: 0;
+                margin-top: 5px;
+                font-weight: 700;
+                font-size: 17px;
+                &:nth-child(1){
+                    padding-left: 0;
+                    border-right: 1px solid $light-line-color;
+                }
+            }
+        }
+        p{
+            font-weight: 500;
+            margin-top: 5px;
+        }
+    }
+
+    .oder-control{
+        background-color: $light-third-color;
+        padding: 10px;
+        border-radius: 3px;
+        margin-bottom: 20px;
+
+        .oder-title{
+            font-size: 22px;
+            font-weight: 500;
+        }
+        .oder-body{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            p{
+                margin: 0;
+            }
+            .oder-final-price{
+                color: $price-color;
+                font-size: 25px;
+            }
+        }
+        .message{
+            font-size: 15px;
+        }
+        a{
+            button{
+                width: 100%;
+                border: 0;
+                text-decoration: none;
+                color: $light-color;
+                background-color: $light-el-primary-color;
+                font-weight: 600;
+                padding: 10px;
+                border-radius: 3px;
+            }
+                
+        }
+    }
+}
+
+.cart.dark{
+    color: $dark-color;
+    .cart-control{
+        background-color: $dark-secondary-color;
+    }
+
+    .address-control{
+        background-color: $dark-secondary-color;
+        .address-title{
+            a{
+                color: $dark-el-primary-color;
+            }
+            p{
+                color: $dark-line-color;
+            }
+        }
+        .user-address{
+            p{
+                &:nth-child(1){
+                    border-right: 1px solid $dark-line-color;
+                }
+            }
+        }
+    }
+
+    .oder-control{
+        background-color: $dark-secondary-color;
+        .oder-body{
+            .oder-final-price{
+                color: $price-color;
+            }
+        }
+        a{
+            button{
+                color: $dark-color;
+                background-color: $dark-el-primary-color;
+            }
+        }
+    }
+}
+
+.arrow-up {
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    top: -5px;
+    right: 15px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #000;
+    z-index: 11;
+}

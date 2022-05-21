@@ -1,0 +1,75 @@
+@import "../../variables";
+
+.noti-card{
+    display: flex;
+    max-width: 100%;
+    margin: 15px 0;
+    align-items: center;
+    font-weight: 500;
+    color: rgba($color: #000000, $alpha: .6);
+
+    button{
+        border: 0;
+        background-color: transparent;
+        font-size: 15px;
+
+        &:hover{
+            font-weight: 700;
+        }
+    }
+
+    .time{
+        padding: 15px;
+    }
+
+    .content{
+        padding: 0 15px;
+        font-size: 14px;
+    }
+
+    .type{
+        color: #fff;
+        padding: 10px;
+        border-radius: 50%;
+        font-size: 24px;
+        margin: 10px;
+        width: 50px;
+
+        &.system{
+            background-color: #dd3386;
+        }
+
+        &.promo{
+            background-color: red;
+        }
+
+        &.order{
+            background-color: #02b7f1;
+        }
+    }
+
+    .readed-btn{
+        width: 50%;
+        margin: 0 10px;
+        color: rgba($color: $light-constract-color, $alpha: .8);
+        font-weight: 600;
+    }
+
+    .delete-btn{
+        font-weight: 600;
+        color: red;
+        margin-right: 15px;
+    }
+}
+
+.noti-card.dark{
+    color: rgba($color: #fff, $alpha: .6);
+
+    .readed-btn{
+        color: rgba($color: $dark-el-primary-color, $alpha: .8);
+    }
+
+    .delete-btn{
+        color: red;
+    }
+}

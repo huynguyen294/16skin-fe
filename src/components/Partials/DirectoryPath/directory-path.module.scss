@@ -1,0 +1,38 @@
+@import '../../variables';
+
+.directory-path {
+  list-style-type: none;
+  display: flex;
+  border-radius: 4px;
+  align-items: center;
+  background-color: $light-third-color;
+  padding: 1em .5em;
+  margin-top: 2em;
+  transition: all 1s ease-in-out;
+  position: relative;
+
+  li a {
+    text-decoration: none;
+    font-size: 15px;
+    padding: 0.5em 1em;
+    color: $light-constract-color;
+    font-weight: 500;
+
+    &:hover {
+      font-weight: 700;
+      animation: btnAnimation 0.5s ease;
+    }
+  }
+}
+
+/* Dark theme */
+
+.directory-path.dark {
+  background-color: $dark-secondary-color;
+  color: $dark-color;
+
+  li a {
+    color: $dark-color;
+    color: $dark-color;
+  }
+}

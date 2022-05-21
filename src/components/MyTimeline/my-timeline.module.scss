@@ -1,0 +1,179 @@
+@import '../variables';
+
+.my-timeline{
+    margin-top: 1em;
+    color: $light-color;
+    font-weight: 500;
+
+    .user-info{
+        padding: 1em;
+        padding-left: 2em;
+        background-color: $light-third-color;
+        border-radius: 3px 0 0 3px;
+        border-left: 1px solid rgba($color: $light-line-color, $alpha: .2);
+
+        img{
+            width: 100px;
+            border-radius: 50%;
+        }
+        .user-name{
+            font-weight: 600;
+            margin: 5px 0;
+            margin-top: 20px;
+        }
+
+        .follower-counter{
+            font-weight: 600;
+            color: $light-line-color;
+        }
+
+        .user-description{
+            color: $light-line-color;
+            font-size: 15px;
+        }
+
+        .follow-btn{
+            background-color: $light-el-secondary-color;
+            color: $light-color;
+            padding: 5px 20px;
+            border-radius: 50px;
+            margin: 10px 0;
+            border: 1px solid $light-el-primary-color;
+            font-weight: 600;
+            color: $link-color;
+
+            i{
+                margin-right: 10px;
+            }
+
+            &:hover{
+                transform: scale(.98);
+                background-color: $light-el-primary-color;
+            }
+        }
+
+        .following-list{
+            margin-top: 20px;
+            padding: 0;
+            list-style-type: none;
+
+            .list-title{
+                margin-bottom: 20px;
+                font-weight: 600;
+
+            }
+
+            .following-card{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 10px 0;
+
+                div{
+                    display: flex;
+                    align-items: center;
+                    img{
+                        width: 30px;
+                        margin-right: 5px;
+                    }
+                }
+
+                i{
+                    cursor: pointer;
+                    padding: 5px 10px;
+                    height: 100%;
+                    border-radius: 4px;
+                    margin-right: 10px;
+
+                    &:hover{
+                        background-color: rgba($color: #000000, $alpha: .1);
+                    }
+                }
+            }
+        }
+    }
+
+    .blog-list{
+        padding: 1em;
+        padding-right: 2em;
+        background-color: $light-third-color;
+
+        .search-input{
+            width: 100%;
+            margin-bottom: 20px;
+            position: relative;
+
+            input{
+                width: 100%;
+                padding: 10px 0 10px 30px;
+                background-color: transparent;
+                border: 1px solid $light-line-color;
+                border-radius: 4px;
+                font-weight: 600;
+
+                &:focus{
+                    outline: none;
+                    background-color: rgba($color: $light-primary-color, $alpha: .3);
+                }
+
+                &::placeholder{
+                    color: $light-line-color;
+                    font-weight: 600;
+                }
+            }
+
+            i{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 10px;
+            }
+        }
+    }
+}
+
+.my-timeline.dark{
+    color: $dark-color;
+    .user-info{
+        background-color: $dark-secondary-color;
+        border-left: 1px solid rgba($color: $dark-line-color, $alpha: .2);
+        .follower-counter{
+            color: $dark-line-color;
+        }
+        .user-description{
+            color: $dark-line-color;
+        }
+        .follow-btn{
+            background-color: rgba($color: $dark-el-secondary-color, $alpha: .1);
+            border: 1px solid $dark-el-primary-color;
+            color: $dark-el-primary-color;
+            &:hover{
+                background-color: rgba($color: $dark-el-primary-color, $alpha: .2);
+            }
+        }
+        .following-list{
+            .following-card{
+                i{
+                    &:hover{
+                        background-color: rgba($color: #fff, $alpha: .1);
+                    }
+                }
+            }
+        }
+    }
+
+    .blog-list{
+        background-color: $dark-secondary-color;
+        .search-input{
+            input{
+                border: 1px solid $dark-line-color;
+                &:focus{
+                    background-color: rgba($color: $dark-primary-color, $alpha: .3);
+                }
+                &::placeholder{
+                    color: $dark-line-color;
+                }
+            }
+        }
+    }
+}

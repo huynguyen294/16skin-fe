@@ -1,0 +1,32 @@
+@import '../../variables';
+
+.product-list {
+  margin-top: 2em;
+  padding: .8em;
+  color: $light-color;
+
+  h1 {
+    margin: 0 0 0 10px;
+    font-size: 45px;
+  }
+
+  .box-pro-list {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    &:nth-child(1){
+      margin-left: 10px;
+    }
+  }
+
+  .box-page-controller{
+    padding-right: 18px;
+  }
+}
+
+/* dark theme */
+
+.product-list.dark {
+  color: $dark-color;
+}

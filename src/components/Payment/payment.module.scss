@@ -1,0 +1,299 @@
+@import '../variables';
+.payment{
+    color: $light-color;
+    margin-top: 2em;
+    .delivery-info{
+        .address{
+            background-color: $light-third-color;
+            border: 1px solid rgba($color:  $light-constract-color, $alpha: .3);
+            border-radius: 3px;
+            display: flex;
+            flex-direction: column;
+            padding: 1em;
+            margin-bottom: 10px;
+
+            input{
+                margin: 10px 0;
+                padding: 10px;
+                background-color: transparent;
+                border: 1px solid rgba($color:  $light-constract-color, $alpha: .3);
+                border-radius: 3px;
+                font-weight: 500;
+
+                &:focus{
+                    outline: 1px solid $light-el-primary-color;
+                    background-color: $light-el-secondary-color;
+                }
+            }
+        }
+    }
+    .payment-methods{
+        background-color: $light-third-color;
+        border: 1px solid rgba($color:  $light-constract-color, $alpha: .3);
+        border-radius: 3px;
+        padding: 1em;
+        ul{
+            list-style-type: none;
+            padding: 10px;
+            li{
+                display: flex;
+                margin: 10px 0;
+                align-items: center;
+                cursor: pointer;
+                img{
+                    width: 50px;
+                    border-radius: 4px;
+                    margin-right: 10px;
+                }
+                p{
+                    font-weight: 500;
+                }
+            }
+
+            .local-card-method{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1em 2em;
+
+                .add-card-btn{
+                    border: 1px solid $light-el-primary-color;
+                    background-color: rgba($color: $link-color, $alpha: .1);
+                    color: $link-color;
+                    font-weight: 500;
+                    padding: 5px 15px;
+                    border-radius: 5px;
+
+                    &:hover{
+                        background-color: rgba($color: $link-color, $alpha: .2);
+                    }
+
+                }
+
+                .box-avaiable-card-title{
+                    margin: 10px 0;
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+
+                .box-avaiable-card{
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    .avaiable-card{
+                        display: flex;
+                        margin-right: 20px;
+                        padding: 10px;
+                        border-radius: 4px;
+                        background-color: rgba($color: #fff, $alpha: .8);
+                        border: 1px solid rgba($color: #fff, $alpha: .8);
+                        cursor: pointer;
+
+                        .bank-avatar{
+                            width: 50px;
+                            border-radius: 4px;
+                            margin-right: 10px;
+                        }
+
+                        &:hover{
+                            border: 1px solid $light-el-primary-color;
+                        }
+
+                        &.active{
+                            border: 1px solid $light-el-primary-color;
+                        }
+                    }
+                }
+            }
+
+        }
+        .pmm-footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .oder-btn{
+                padding: .5em 3em;
+                border: 0;
+                background-color: $light-el-primary-color;
+                color: $light-constract-color;
+                font-weight: 500;
+                border-radius: 4px;
+                margin-right: 1em;
+
+                &:hover{
+                    transform: scale(.98);
+                }
+            }
+        }
+    }
+    .oder-info{
+        background-color: $light-third-color;
+        border: 1px solid rgba($color:  $light-constract-color, $alpha: .3);
+        border-radius: 3px;
+        padding: 1em;
+        height: 100%;
+        img{
+            width: 100px;
+            margin-right: 10px;
+            border-radius: 3px;
+        }
+        .product{
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            position: relative;
+            span{
+                position: absolute;
+                top: -6px;
+                left: 90px;
+                width: 20px;
+                height: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                background-color: $light-el-primary-color;
+            }
+            p{
+                margin: 0;
+                padding: 0;
+                font-weight: 500;
+            }
+            :nth-child(2){
+                width: 55%;
+                margin-right: 20px;
+            }
+        }
+
+        .discount-code{
+            display: flex;
+            justify-content: space-between;
+            input{
+                padding: .5em 1em;
+                border-radius: 4px;
+                border: 1px solid rgba($color:  $light-constract-color, $alpha: .3);
+                font-weight: 500;
+
+                &:focus{
+                    background-color: $light-el-secondary-color;
+                    outline: none;
+                }
+            }
+            button{
+                padding: .5em 2em;
+                border: 0;
+                background-color: $light-el-primary-color;
+                border-radius: 4px;
+                font-weight: 500;
+            }
+        }
+
+        .total-line{
+            display: flex;
+            justify-content: space-between;
+            font-weight: 500;
+
+            #curr-price{
+                font-size: 20px;
+            }
+
+            #final-price{
+                font-size: 25px;
+                color: $price-color;
+            }
+        }
+    }
+}
+
+.payment.dark{
+    color: $dark-color;
+    .delivery-info{
+        .address{
+            background-color: $dark-secondary-color;
+            border: 1px solid rgba($color:  $dark-el-primary-color, $alpha: .5);
+
+            input{
+                border: 1px solid rgba($color:  $dark-el-primary-color, $alpha: .5);
+                color: $dark-color;
+
+                &::placeholder{
+
+                    color:$dark-line-color;
+                    font-weight: 500;
+                }
+
+                &:focus{
+                    outline: 1px solid $dark-el-primary-color;
+                    background-color: rgba($color:  $dark-el-secondary-color, $alpha: .3);
+                }
+            }
+        }
+    }
+    .payment-methods{
+        background-color: $dark-secondary-color;
+        border: 1px solid rgba($color:  $dark-el-primary-color, $alpha: .5);
+        a{
+            color: $dark-el-primary-color;
+        }
+        .local-card-method{
+            .add-card-btn{
+                border: 1px solid $dark-el-primary-color;
+                background-color: rgba($color: $dark-el-primary-color, $alpha: .1);
+                color: $dark-color;
+                &:hover{
+                    background-color: rgba($color: $dark-el-primary-color, $alpha: .2);
+                }
+            }
+            .box-avaiable-card{
+                .avaiable-card{
+                    background-color: rgba($color: #000, $alpha: .5);
+                    border: 1px solid rgba($color: #000, $alpha: .5);
+                    &:hover{
+                        border: 1px solid $dark-el-primary-color;
+                    }
+
+                    &.active{
+                        border: 1px solid $dark-el-primary-color;
+                    }
+                }
+            }
+        }
+        .pmm-footer{
+            .oder-btn{
+                background-color: $dark-el-primary-color;
+                color: $dark-color;
+            }
+        }
+    }
+    .oder-info{
+        background-color: $dark-secondary-color;
+        border: 1px solid rgba($color:  $dark-el-primary-color, $alpha: .5);
+        .product{
+            span{
+                background-color: $dark-el-primary-color;
+            }
+        }
+
+        .discount-code{
+            input{
+                border: 1px solid rgba($color:  $dark-el-primary-color, $alpha: .5);
+                background-color: transparent;
+                color: $dark-color;
+
+                &::placeholder{
+                    color:$dark-line-color;
+                    font-weight: 500;
+                }
+
+                &:focus{
+                    outline: 1px solid $dark-el-primary-color;
+                    background-color: rgba($color:  $dark-el-secondary-color, $alpha: .3);
+                }
+            }
+            button{
+                background-color: $dark-el-primary-color;
+                color: $dark-color;
+            }
+        }
+    }
+}

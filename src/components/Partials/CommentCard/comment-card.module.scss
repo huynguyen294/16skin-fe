@@ -1,0 +1,53 @@
+@import '../../variables';
+.evaluete-card{
+    padding: 2em;
+    padding-top: 0;
+    border-bottom: rgba($light-line-color, 0.1) 1px solid;
+    .user-avatar{
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 0;
+        img{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+    }
+    .evaluete{
+        p{
+            padding: 0;
+            margin: 0;
+        }
+        .user-name{
+            font-weight: 500;
+        }
+        .eval-time{
+            text-transform: uppercase;
+            font-size: 14px;
+            color: rgba($light-line-color, 0.5);
+            margin-top: 10px;
+        }
+    }
+    margin-top: 1em;
+    .box-eval-images{
+        margin-top: 10px;
+        img{
+            border-radius: 2px;
+            object-fit: cover;
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+            cursor: zoom-in;
+        }
+    }
+}
+
+.evaluete-card.dark{
+    border-bottom: rgba($dark-line-color, 0.1) 1px solid;
+    .evaluete{
+        .eval-time{
+            color: rgba($dark-line-color, 0.5);
+        }
+    }
+}
+

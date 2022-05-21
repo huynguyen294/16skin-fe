@@ -1,0 +1,52 @@
+@import '../../variables';
+.evaluete-filter{
+    display: flex;
+    .filter-detail{
+        width: 15%;
+        h3{
+            color: $price-color;
+            font-size: 25px;
+            font-weight: 400;
+            span{
+                font-weight: 600;
+                font-size: 35px;
+            }
+        }
+        i{
+            color: $price-color;
+        }
+    }
+    .blocks-filter{
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 30px;
+        .filter-type{
+            padding: 5px 30px;
+            background-color: #fff;
+            margin: 10px;
+            text-decoration: none;
+            color: $light-color ;
+            border: 1px solid rgba($light-line-color, 0.1);
+            &.active{
+                background-color: rgba($color: #000000, $alpha: .1);
+                border: $light-constract-color 1px solid;
+            }
+        }
+        
+    }
+}
+
+.evaluete-filter.dark{
+    .blocks-filter{
+        .filter-type{
+            background-color: $dark-secondary-color;
+            color: $dark-color;
+            border: 1px solid $dark-line-color;
+            &.active{
+                border: 1px solid rgba(rgb(254, 63, 0), .7);
+                background-color: $dark-primary-color;
+            }
+        }
+        
+    }
+}

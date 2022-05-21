@@ -1,0 +1,139 @@
+@import '../../variables';
+
+.tooltip{
+    position: absolute;
+    left: 60%;
+    display: none;
+    animation: subMenuUp .3s ease;
+    width: 250%;
+    background-color: #797979;
+    border-radius: 3px;
+    padding: 5px 0;
+    color: rgb(238, 238, 238);
+}
+
+.noti{
+    color: $light-color;
+    h3{
+        font-size: 25px;
+    }
+    .box-noti{
+        .noti-controller{
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: $light-secondary-color-solid;
+            border-radius: 3px;
+
+            li{
+                width: 10%;
+                text-align: center;
+                padding: 15px;
+                cursor: pointer;
+                position: relative;
+
+                .noti-dot{
+                    display: block;
+                    height: 5px;
+                    width: 5px;
+                    border-radius: 50%;
+                    top: 20%;
+                    right: 25%;
+                    position: absolute;
+                    background-color: rgb(239, 11, 11);
+                }
+
+                i{
+                    color: $light-line-color;
+                    font-size: 22px;
+                }
+
+                &:hover{
+                    background-color: rgba($color: #000000, $alpha: .1);
+                    .tooltip{
+                        display: block;
+                    }
+                }
+
+                &.active{
+                    border-bottom: 4px solid $light-el-primary-color;
+                }
+            }
+
+            .last{
+                flex: 1;
+                position: relative;
+                padding: .5em;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                
+                i{
+                    cursor: pointer;
+                    color: $light-line-color;
+                    padding: 0 10px;
+                }
+                ul{
+                    display: none;
+                    list-style-type: none;
+                    padding: 10px;
+                    position: absolute;
+                    right: 15px;
+                    top: 90%;
+                    border-radius: 4px;
+                    box-shadow: 0px 0px 6px 3px $light-shadow-color;
+                    background-color: $light-bright-color;
+                    animation: subMenuUp .3s ease;
+                    
+                    &.active{
+                        display: block;
+                    }
+
+                    li{
+                        text-align: start;
+                        width: 100%;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .main-noti{
+        padding: 1em 0;
+    }
+}
+
+.noti.dark{
+    color: $dark-color;
+    .box-noti{
+        .noti-controller{
+            background-color: $dark-secondary-color;
+            li{
+                i{
+                    color: $dark-line-color;
+                    font-size: 22px;
+                }
+                &:hover{
+                    background-color: rgba($color: #fff, $alpha: .1);
+                }
+
+                &.active{
+                    border-bottom: 4px solid $dark-el-primary-color;
+                }
+            }
+
+            .last{
+                i{
+                    color: $dark-line-color;
+                }
+                ul{
+                    box-shadow: 0px 0px 6px 3px $dark-shadow-color;
+                    background-color: $dark-secondary-color-solid;
+                    animation: subMenuUp .3s ease;
+                }
+            }
+        }
+    }
+}

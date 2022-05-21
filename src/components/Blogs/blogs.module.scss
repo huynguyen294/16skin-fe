@@ -1,0 +1,62 @@
+@import '../variables';
+
+.blogs{
+    color: $light-color;
+    margin-top: 2em;
+    h1{
+        margin: 0;
+    }
+    .box-blogs{
+        padding-right: 2em;
+        border-right: 1px solid rgba($color: $light-line-color, $alpha: .3);
+    }
+
+    .propose-search{
+        margin-top: 1em;
+        padding-left: 2em;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+
+        h3{
+            font-size: 18px;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: $light-line-color;
+        }
+
+        div{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        p {
+            padding: 5px 15px;
+            border-radius: 20px;
+            background-color: rgba($color: #000000, $alpha: .2);
+            font-weight: 500;
+            margin: 5px;
+        }
+    }
+        
+}
+
+.blogs.dark{
+    color: $dark-color;
+    .description{
+        color: rgba($color: #fff, $alpha: .6);
+    }
+    .box-blogs{
+        border-right: 1px solid rgba($color: $dark-line-color, $alpha: .3);
+    }
+
+    .propose-search{
+        h3{
+            color: $dark-line-color;
+        }
+        p {
+            background-color: rgba($color: #fff, $alpha: .2);
+        }
+    }
+        
+}

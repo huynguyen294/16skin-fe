@@ -1,0 +1,41 @@
+@import '../../../variables';
+
+.footer-info {
+  width: 350px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+  padding: 1em;
+
+  .fo-info-title {
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  .fo-info-list {
+    list-style-type: none;
+
+    a {
+      text-decoration: none;
+      color: $light-color;
+      cursor: pointer;
+
+      &:hover {
+        color: $light-constract-color;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.footer-info.dark {
+  .fo-info-list {
+    a {
+      color: $dark-color;
+
+      &:hover {
+        color: $dark-el-primary-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,270 @@
+@import '../../variables';
+
+.delivery-detail{
+    color: $light-color;
+    font-weight: 500;
+    .delivery-main{
+        padding-left: 0;
+        .delivery-title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: $light-third-color;
+            padding: 1em 2em;
+            border-radius: 3px;
+
+            h5{
+                font-weight: 600;
+                font-size: 25px;
+            }
+
+            p{
+                color: $light-line-color;
+            }
+
+            h3{
+                font-size: 30px;
+                font-weight: 600;
+            }
+            
+            img{
+                width: 200px;
+                margin-right: 2em;
+            }
+        }
+
+        .delivery-box{
+            background-color: $light-third-color;
+            margin-top: 20px;
+            border-radius: 3px;
+            padding: 1em;
+            
+            .delivery-timeline{
+                list-style-type: none;
+                padding: 0;
+
+                li{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .delivery-time{
+                        width: 20%;
+                        padding-left: 2em;
+                        padding-top: 2em;
+                    }
+
+                    .delivery-content{
+                        width: 80%;
+                        border-left: 2px solid rgba($color: $light-line-color, $alpha: .2);
+                        padding-left: 10%;
+                        position: relative;
+
+                        .dot{
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: rgb(160, 160, 160);
+                            position: absolute;
+                            top: calc(50% + 1em);
+                            transform: translateY(-50%);
+                            left: -6px;
+                        }
+    
+                        &.active{
+    
+                            .delivery-head{
+                                color: $link-color;
+                                font-weight: 700;
+                            }
+    
+                            .dot{
+                                background-color: $link-color;
+                            }
+                        }
+
+                        .delivery-head{
+                            padding-top: 2em;
+                            font-size: 20px;
+                            margin: 0;
+                        }
+
+                        .delivery-description{
+                            height: 100%;
+                            font-size: 14px;
+                            color: $light-line-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .delivery-info{
+        .delivery-transporter{
+            background-color: $light-third-color;
+            padding: 1em;
+            border-radius: 3px;
+
+            .transporter-name{
+                display: flex;
+                img{
+                    margin-top: 20px;
+                    margin-left: 10px;
+                    width: 50px;
+                    border-radius: 50%;
+                }
+                div{
+                    display: flex;
+                    flex-direction: column;
+
+                    :nth-child(2){
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+
+                    margin: 0 10px;
+                    margin-top: 20px;
+                    width: 70%;
+                }
+            }
+
+            .tracking-number{
+                padding-bottom: 20px;
+
+                i{
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .delivery-receiver{
+            padding: 1em;
+            background-color: $light-third-color;
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            border-radius: 3px;
+
+            i{
+                font-size: 20px;
+                margin-right: 10px;
+            }
+
+            .receiver-name{
+                font-weight: 600;
+            }
+
+            .receiver-address{
+                font-size: 14px;
+                color: $light-line-color;
+            }
+        }
+
+        .delivery-order{
+            margin-top: 20px;
+            padding: 1em;
+            background-color: $light-third-color;
+            position: relative;
+            border-radius: 3px;
+
+            img{
+                border-radius: 3px;
+            }
+
+            .delivery-product{
+                margin-top: 10px;
+                display: flex;
+                img{
+                    width: 100px;
+                    margin-right: 10px;
+                }
+            }
+
+            .delivery-status{
+                position: absolute;
+                right: 30px;
+                bottom: 30px;
+                font-size: 15px;
+                color: $light-line-color;
+            }
+        }
+
+        .help-btn{
+            width: 100%;
+            margin-top: 20px;
+            background-color: transparent;
+            color: $link-color;
+            padding: 5px;
+            border-radius: 10px;
+            border: 1px solid $link-color;
+
+            &:hover{
+                transform: scale(.99);
+            }
+        }
+    }
+}
+
+.delivery-detail.dark{
+    color: $dark-color;
+    .delivery-main{
+        .delivery-title{
+            background-color: $dark-secondary-color;
+            p{
+                color: $dark-line-color;
+            }
+        }
+
+        .delivery-box{
+            background-color: $dark-secondary-color;
+            .delivery-timeline{
+                li{
+                    .delivery-content{
+                        border-left: 2px solid rgba($color: $dark-line-color, $alpha: .2);
+                        .dot{
+                            background-color: rgb(160, 160, 160);
+                        }
+    
+                        &.active{
+                            .delivery-head{
+                                color: $dark-el-primary-color;
+                            }
+    
+                            .dot{
+                                background-color: $dark-el-primary-color;
+                            }
+                        }
+                        .delivery-description{
+                            color: $dark-line-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .delivery-info{
+        .delivery-transporter{
+            background-color: $dark-secondary-color;
+        }
+
+        .delivery-receiver{
+            background-color: $dark-secondary-color;
+            .receiver-address{
+                color: $dark-line-color;
+            }
+        }
+        .delivery-order{
+            background-color: $dark-secondary-color;
+            .delivery-status{
+                color: $dark-line-color;
+            }
+        }
+
+        .help-btn{
+            color: $dark-el-primary-color;
+            border: 1px solid $dark-el-primary-color;
+        }
+    }
+}

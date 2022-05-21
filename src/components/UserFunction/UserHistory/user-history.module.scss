@@ -1,0 +1,17 @@
+@import '../../variables';
+
+.user-history{
+    color: $light-color;
+    h3{
+        font-size: 25px;
+        padding: 0;
+        margin: 0;
+    }
+    .box-history{
+        margin-top: 15px;
+    }
+}
+
+.user-history.dark{
+    color: $dark-color;
+}

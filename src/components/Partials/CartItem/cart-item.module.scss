@@ -1,0 +1,108 @@
+@import '../../variables';
+
+.cart-item{
+    padding: 10px;
+    background-color: $light-third-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    border-radius: 3px;
+    .product{
+        display: flex;
+        align-items: center;
+        width: 40%;
+        margin-left: 15px;
+        margin-right: -15px;
+        img{
+            width: 100px;
+            border-radius: 2px;
+            margin: 0 5px;
+        }
+        p{
+            font-weight: 500;
+            padding: 10px;
+            margin: 0;
+        }
+    }
+
+    .price-group{
+        display: flex;
+        align-items: center;
+        width: 20%;
+        .reduced-price{
+            font-weight: 500;
+            font-size: 20px;
+            margin-right: 5px;
+        }
+        .price{
+            color: $light-line-color;
+            text-decoration: line-through;
+            font-size: 13px;
+        }
+    }
+
+    .qty{
+        width: 15%;
+        input{
+            width: 30%;
+            text-align: center;
+            border: 0;
+            background-color: rgba($color: $light-el-primary-color, $alpha: 0.3);
+            border-top: 1px solid rgba($color: $light-el-primary-color, $alpha: 0.6);
+            border-bottom: 1px solid rgba($color: $light-el-primary-color, $alpha: 0.6);
+
+            &:focus{
+                outline: none;
+            }
+        }
+        button{
+            width: 20%;
+            background-color: rgba($color: $light-el-primary-color, $alpha: 0.8);
+            border: 1px solid rgba($color: $light-el-primary-color, $alpha: 0.6);
+            &:active{
+                transform: scale(.98);
+            }
+        }
+    }
+
+    .final-price{
+        width: 10%;
+        padding: 0;
+        margin: 0;
+        color: $price-color;
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    span{
+        &:last-child{
+            cursor: pointer;
+        }
+    }
+}
+
+.cart-item.dark{
+    padding: 10px;
+    background-color: $dark-secondary-color;
+
+    .price-group{
+        .price{
+            color: $dark-line-color;
+        }
+    }
+
+    .qty{
+        input{
+            background-color: rgba($color: #000000, $alpha: 0.2);
+            border-top: 1px solid rgba($color: $dark-el-primary-color, $alpha: 0.6);
+            border-bottom: 1px solid rgba($color: $dark-el-primary-color, $alpha: 0.6);
+            color: $dark-color;
+        }
+        button{
+            background-color: rgba($color: $dark-el-primary-color, $alpha: 0.6);
+            border: 1px solid rgba($color: $dark-el-primary-color, $alpha: 0.6);
+            color: $dark-color;
+        }
+    }
+}
