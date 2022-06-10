@@ -863,9 +863,7 @@ export const blogs = [
   {
     _id: '1',
     subject: '5 THƯƠNG HIỆU DƯỢC MỸ PHẨM MUỐN DA ĐẸP NÀNG CẦN BIẾT',
-    cover_image:
-      basename +
-      '/assets/images/blogs-img/5-thuong-hieu-duoc-my-pham-muon-da-dep-nang-can-biet-thumb_6b7c3fd19cc44e558ecf13f1f92d3559_grande.jpg',
+    cover_image: basename + '/assets/images/blogs-img/1.jpg',
     author_id: '1',
     time: '13/05/2022',
     description:
@@ -874,9 +872,7 @@ export const blogs = [
   {
     _id: '2',
     subject: 'BÍ QUYẾT TRANG ĐIỂM TRONG VEO NHƯ IDOL HÀN',
-    cover_image:
-      basename +
-      '/assets/images/blogs-img/bi-quyet-trang-diem-trong-veo-nhu-idol-han-thumb_e500324dadda4253930ed63a1a06a8b7_grande.jpg',
+    cover_image: basename + '/assets/images/blogs-img/2.jpg',
     author_id: '1',
     time: '12/05/2022',
     description:
@@ -885,9 +881,7 @@ export const blogs = [
   {
     _id: '3',
     subject: 'NGHE NHIỀU NHƯNG BẠN ĐÃ HIỂU RÕ VỀ DƯỢC MỸ PHẨM?',
-    cover_image:
-      basename +
-      '/assets/images/blogs-img/nghe-nhieu-nhung-ban-da-hieu-ro-ve-duoc-my-pham-thumb_f0674a9a27714d6280cfb8d2458b1f43_grande.jpg',
+    cover_image: basename + '/assets/images/blogs-img/4.jpg',
     author_id: '1',
     time: '11/05/2022',
     description:
@@ -896,9 +890,7 @@ export const blogs = [
   {
     _id: '4',
     subject: '“GIẢI CỨU” MÁI TÓC BỊ HƯ TỔN TRỞ NÊN SUÔN MƯỢT HÚT HỒN',
-    cover_image:
-      basename +
-      '/assets/images/blogs-img/oc_giai-cuuoc_-mai-toc-bi-hu-ton-tro-nen-suon-muot-hut-hon-thumb_a7e862efe8e74b708add459d0c5eb8aa_grande.jpg',
+    cover_image: basename + '/assets/images/blogs-img/5.jpg',
     author_id: '1',
     time: '10/05/2022',
     description:
@@ -907,9 +899,7 @@ export const blogs = [
   {
     _id: '5',
     subject: 'GỢI Ý NHỮNG MÓN QUÀ TẶNG NHÂN NGÀY CỦA MẸ',
-    cover_image:
-      basename +
-      '/assets/images/blogs-img/mother_s_b620d3151a1842f0accd222688e64e66_grande.png',
+    cover_image: basename + '/assets/images/blogs-img/3.png',
     author_id: '1',
     time: '05/05/2022',
     description:
