@@ -100,12 +100,12 @@ function Details() {
           </div>
           <hr />
           <div className={boxPrices_style}>
-            <h3 className={reducedPrice_style}>
-              {FORMAT_MONEY('' + currProduct.sale_price)}
-              <span>đ</span>
-            </h3>
             <h3 className={price_style}>
               {FORMAT_MONEY('' + currProduct.price)}
+              <span>đ</span>
+            </h3>
+            <h3 className={reducedPrice_style}>
+              {FORMAT_MONEY('' + currProduct.sale_price)}
               <span>đ</span>
             </h3>
             <p className={reducedPercent_style}>

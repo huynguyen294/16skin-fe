@@ -152,16 +152,6 @@ function NavMenuRight({ navFixed }) {
                 <p>Blogs</p>
               </Link>
             </li>
-            <li>
-              <Link
-                onClick={() => {
-                  setSubMenuAct(false);
-                }}
-                to="/write-blog"
-              >
-                <p>Viết blog</p>
-              </Link>
-            </li>
             <hr />
             <li>
               <Link to={'/guide'}>

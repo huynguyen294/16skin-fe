@@ -26,12 +26,43 @@ function Guide() {
       />
       <h1 className={guideTitle_style}>Giới thiệu trang web</h1>
       <ul className={part_style}>
-        <h3 className={partTitle_style}>Chú ý:</h3>
-        <li>- trang web có 2 giao diện sáng và tối</li>
-        <li>- dữ liệu trên trang web đều là ảo</li>
+        <h3 className={partTitle_style}>Mô tả:</h3>
         <li>
-          - khi reload sẽ reset lại tất cả dữ liệu, kể cả trạng thái đăng nhập
+          - Đây là trang web bán hàng chỉ thực hiện front-end bao gồm các tính
+          năng: giao diện tối - sáng, gộp sản phẩm theo danh mục, xem chi tiết
+          sản phẩm, quản lí giỏ hàng, đặt hàng, đọc blog, quản lí tài khoảng
+          (profile, thông báo, địa chỉ..), quản lí đơn hàng, theo dõi tình trạng
+          đơn hàng.
         </li>
+      </ul>
+      <ul className={part_style}>
+        <h3 className={partTitle_style}>Điểm nhấn kỹ thuật:</h3>
+        <li>
+          - Thực hiện layout cho nhiều trang web và routing các trang web.
+        </li>
+        <li>
+          - Render data ảo lên giao diện (sản phẩm, bộ sưu tập, banner, comment,
+          các đơn đơn hàng, các bài blogs, các địa chỉ của khách hàng.).
+        </li>
+        <li>- Xem thanh cuộn bộ sưu tập sản phẩm hot.</li>
+        <li>
+          - Chuyển trang khi xem đánh giá sản phẩm và trong danh mục sản phẩm.
+        </li>
+        <li>- Banner xoay vòng tự động thay đổi sau 2s.</li>
+        <li>- Phân loại sản phẩm theo bộ sưu tập</li>
+        <li>
+          - Xem chi tiết sản phẩm: load thông tin giá, sale, đánh giá - bình
+          luận, hình ảnh (5 ảnh), thêm vào yêu thích , giỏ hàng, xem sản phẩm
+          tương tự.
+        </li>
+        <li>
+          - Logic các modal (xác nhận sdt bằng code khi đăng kí, thêm thẻ atm
+          khi thanh toán, thêm sản phẩm vào giỏ hàng) với redux.
+        </li>
+        <li>- Css cho các component </li>
+      </ul>
+      <ul className={part_style}>
+        <h3 className={partTitle_style}>Chú ý:</h3>
         <li>
           - phải ĐĂNG NHẬP mới có thể sử dụng các chức năng như: xem thông tin
           tài khoảng, thông báo, quản lí đơn hàng, mã giảm giá, trang cá nhân,
